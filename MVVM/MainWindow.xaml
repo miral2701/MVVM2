@@ -5,11 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="323,130,0,0" TextWrapping="Wrap" Text="{Binding Login}" VerticalAlignment="Top" Width="184" Height="30"/>
-        <TextBox HorizontalAlignment="Left" Margin="323,187,0,0" TextWrapping="Wrap" Text="{Binding Password}" VerticalAlignment="Top" Width="184" Height="30"/>
-        <Button Content="Button" HorizontalAlignment="Left" Command="{Binding LoginCommand}" Margin="323,266,0,0" VerticalAlignment="Top" Height="36" Width="182"/>
+        Title="TempretureConverter" Height="359" Width="353">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFDBDF0F" Offset="0"/>
+            <GradientStop Color="#FF85E675" Offset="1"/>
+            <GradientStop Color="#FF42E249" Offset="0.785"/>
+            <GradientStop Color="#FF9DE026" Offset="0"/>
+            <GradientStop Color="#FFFCFF63" Offset="0.377"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="10,0,0,0">
+        <TextBox HorizontalAlignment="Left"  Margin="105,38,0,0" TextWrapping="Wrap" Text="{Binding Celsius, Mode=TwoWay}" VerticalAlignment="Top" Width="184" Height="30"/>
+        <TextBox HorizontalAlignment="Left" Margin="105,101,0,0" TextWrapping="Wrap" Text="{Binding Fahrenheit ,Mode=TwoWay}" VerticalAlignment="Top" Width="184" Height="30"/>
+        <Button Background="Aquamarine"  Content="Convert" HorizontalAlignment="Center" Command="{Binding ConvertCommand}" Margin="0,216,0,0" VerticalAlignment="Top" Height="37" Width="123" FontWeight="Bold" FontStyle="Italic" FontFamily="Dubai" FontSize="18">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF36B8BC"/>
+                    <GradientStop Color="#FFFFDD00" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Margin="105,0,0,0" TextWrapping="Wrap" Text="{Binding Kelvin ,Mode=TwoWay}" VerticalAlignment="Center" Width="184" Height="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,41,0,0" TextWrapping="Wrap" Text="Celsius" VerticalAlignment="Top" Height="23" Width="66" FontSize="18" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="3,104,0,0" TextWrapping="Wrap" Text="Fahrenheit" VerticalAlignment="Top" Height="23" Width="97" FontSize="18" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,0,0,0" TextWrapping="Wrap" Text="Kelvin" VerticalAlignment="Center" Height="23" Width="66" FontSize="18" FontWeight="Bold"/>
 
     </Grid>
 </Window>

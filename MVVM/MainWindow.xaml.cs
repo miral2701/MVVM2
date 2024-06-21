@@ -21,7 +21,7 @@ namespace MVVM
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext=new LoginViewModel();
+            this.DataContext=new ViewModel();
         }
     }
 }
